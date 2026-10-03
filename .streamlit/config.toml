@@ -1,0 +1,23 @@
+# Light and dark themes both follow the viewer's system setting
+# (switch any time from the ⋮ menu → Settings).
+[theme.light]
+primaryColor = "#2a78d6"
+
+[theme.dark]
+primaryColor = "#3987e5"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+
+[global]
+# Streamlit normally keeps big messages (figures, images) in the browser and later re-sends them only "by
+# reference". With live sliders the app reruns many times per second, and the browser can drop a cached
+# message just before the server refers to it -> "Cached ForwardMsg MISS" and the page disconnects.
+# Switching that cache off removes the race; on localhost the extra bytes cost nothing.
+minCachedMessageSize = 1e12

@@ -1,0 +1,27 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit secrets (never commit)
+.streamlit/secrets.toml
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# test-tool output (screenshots, logs)
+tools/out/
+
+# raw session transcript (contains personal details; keep it out of public repos)
+docs/session-history/*.jsonl
